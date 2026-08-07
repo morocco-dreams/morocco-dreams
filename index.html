@@ -1,163 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Morocco Dreams</title>
+<title>Morocco Dreams</title>
 
-  <!-- REAL ICONS -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 25px;
-      color: white;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .container {
-      width: 100%;
-      max-width: 430px;
-      text-align: center;
-    }
+body{
+  min-height:100vh;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#fff;
 
-    .logo {
-      font-size: 55px;
-      margin-bottom: 15px;
-    }
+  background:
+    linear-gradient(
+      rgba(0,25,55,.22),
+      rgba(0,25,55,.38)
+    ),
+    url("background.jpg");
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
 
-    .welcome {
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
+.page{
+  min-height:100vh;
+  padding:35px 20px 30px;
+}
 
-    .description {
-      line-height: 1.6;
-      margin-bottom: 30px;
-      opacity: 0.9;
-    }
+.container{
+  width:100%;
+  max-width:430px;
+  margin:auto;
+  text-align:center;
+}
 
-    .link {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      padding: 17px 20px;
-      margin: 14px 0;
-      background: white;
-      color: #222;
-      text-decoration: none;
-      border-radius: 16px;
-      font-size: 18px;
-      font-weight: bold;
-      box-shadow: 0 7px 20px rgba(0,0,0,.2);
-    }
 
-    .link i {
-      width: 45px;
-      font-size: 29px;
-      margin-right: 15px;
-    }
+/* LOGO */
 
-    .website i {
-      color: #2575fc;
-    }
+.logo{
+  width:190px;
+  margin:0 auto 24px;
+}
 
-    .whatsapp i {
-      color: #25D366;
-    }
+.logo img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;
 
-    .instagram i {
-      color: #E1306C;
-    }
+  filter:
+    drop-shadow(0 6px 16px rgba(0,0,0,.35));
+}
 
-    .facebook i {
-      color: #1877F2;
-    }
 
-    .link:active {
-      transform: scale(.97);
-    }
+/* WELCOME */
 
-    footer {
-      margin-top: 30px;
-      font-size: 13px;
-      opacity: .8;
-    }
-  </style>
+h1{
+  font-size:36px;
+  font-weight:800;
+  margin-bottom:12px;
+
+  text-shadow:
+    0 3px 10px rgba(0,0,0,.65);
+}
+
+.description{
+  font-size:16px;
+  line-height:1.65;
+  margin-bottom:30px;
+
+  text-shadow:
+    0 2px 7px rgba(0,0,0,.70);
+}
+
+
+/* BUTTONS */
+
+.link{
+  width:100%;
+  min-height:88px;
+
+  display:flex;
+  align-items:center;
+
+  margin:14px 0;
+  padding:12px 16px;
+
+  border-radius:22px;
+
+  color:#fff;
+  text-decoration:none;
+
+  text-align:left;
+
+  border:
+    1px solid rgba(225,177,72,.75);
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.30);
+
+  transition:.15s;
+}
+
+.link:active{
+  transform:scale(.97);
+}
+
+
+/* ICON */
+
+.icon{
+  width:60px;
+  height:60px;
+  min-width:60px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  margin-right:16px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  font-size:34px;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.20);
+}
+
+
+/* TEXT */
+
+.info{
+  flex:1;
+}
+
+.info strong{
+  display:block;
+  font-size:19px;
+  margin-bottom:5px;
+}
+
+.info small{
+  display:block;
+  font-size:13px;
+  opacity:.85;
+}
+
+
+/* ARROW */
+
+.arrow{
+  padding-left:8px;
+  font-size:22px;
+  color:#e2ad47;
+}
+
+
+/* WEBSITE */
+
+.website{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5,62,112,.97),
+      rgba(1,41,84,.97)
+    );
+}
+
+.website .icon{
+  color:#c99b36;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,158,88,.97),
+      rgba(0,108,62,.97)
+    );
+}
+
+.whatsapp .icon{
+  color:#25D366;
+}
+
+
+/* INSTAGRAM */
+
+.instagram{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(220,42,132,.97),
+      rgba(121,35,160,.97)
+    );
+}
+
+.instagram .icon{
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4,
+      #e1306c,
+      #fd1d1d,
+      #fcb045
+    );
+}
+
+
+/* FACEBOOK */
+
+.facebook{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,106,195,.97),
+      rgba(0,65,142,.97)
+    );
+}
+
+.facebook .icon{
+  color:#1877F2;
+}
+
+
+/* TIKTOK */
+
+.tiktok{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(32,32,32,.98),
+      rgba(0,0,0,.98)
+    );
+}
+
+.tiktok .icon{
+  color:#000;
+}
+
+
+/* EMAIL */
+
+.email{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(180,48,58,.97),
+      rgba(118,25,37,.97)
+    );
+}
+
+.email .icon{
+  color:#c63b49;
+}
+
+
+/* FOOTER */
+
+.bottom{
+  margin-top:30px;
+}
+
+.ornament{
+  color:#d7a947;
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+footer{
+  color:#e1b65a;
+  font-size:14px;
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,.7);
+}
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+  .page{
+    padding:28px 18px 25px;
+  }
+
+  .logo{
+    width:175px;
+  }
+
+  h1{
+    font-size:32px;
+  }
+
+  .description{
+    font-size:15px;
+  }
+
+  .link{
+    min-height:84px;
+  }
+
+  .icon{
+    width:56px;
+    height:56px;
+    min-width:56px;
+    font-size:31px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
+<div class="page">
+
 <div class="container">
+
+
+<!-- LOGO - ONLY ONCE -->
+
 <div class="logo">
-  <img src="1786134145353.jpg" alt="Morocco Dreams Logo" style="width:180px; max-width:80%; height:auto; border-radius:20px;">
+
+<img
+src="1786134145353.jpg"
+alt="Morocco Dreams Logo">
+
 </div>
 
-  <h1>Morocco Dreams</h1>
 
-  <div class="welcome">
-    Welcome to Morocco Dreams
-  </div>
+<!-- WELCOME -->
 
-  <p class="description">
-    Discover the beauty of Morocco with us.<br>
-    Follow us and contact us for more information.
-  </p>
+<h1>
+Welcome to Morocco Dreams
+</h1>
 
-  <!-- WEBSITE -->
-  <a class="link website"
-     href="https://morocco-dreams.com"
-     target="_blank">
-    <i class="fa-solid fa-globe"></i>
-    <span>Official Website</span>
-  </a>
+<p class="description">
 
-  <!-- WHATSAPP -->
-  <a class="link whatsapp"
-     href="https://wa.me/212691223601"
-     target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-    <span>WhatsApp</span>
-  </a>
+Discover the magic of Morocco and stay connected with us.<br>
 
-  <!-- INSTAGRAM -->
-  <a class="link instagram"
-     href="https://www.instagram.com/morocco___dreams"
-     target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-    <span>Instagram</span>
-  </a>
+Choose your preferred platform below.
 
-  <!-- FACEBOOK -->
-  <a class="link facebook"
-     href="https://www.facebook.com/share/1D7WYkjmti/"
-     target="_blank">
-    <i class="fa-brands fa-facebook-f"></i>
-    <span>Facebook</span>
-  </a>
+</p>
 
-  <footer>
-    © Morocco Dreams
-  </footer>
 
+<!-- WEBSITE -->
+
+<a
+class="link website"
+href="https://morocco-dreams.com"
+target="_blank">
+
+<div class="icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+
+<div class="info">
+<strong>Official Website</strong>
+<small>Visit our official website</small>
+</div>
+
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+
+</a>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="link whatsapp"
+href="https://wa.me/212691223601"
+target="_blank">
+
+<div class="icon">
+<i class="fa-brands fa-whatsapp"></i>
+</div>
+
+<div class="info">
+<strong>WhatsApp</strong>
+<small>Chat with us on WhatsApp</small>
+</div>
+
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+
+</a>
+
+
+<!-- INSTAGRAM -->
+
+<a
+class="link instagram"
+href="https://www.instagram.com/morocco___dreams"
+target="_blank">
+
+<div class="icon">
+<i class="fa-brands fa-instagram"></i>
+</div>
+
+<div class="info">
+<strong>Instagram</strong>
+<small>Follow us on Instagram</small>
+</div>
+
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+
+</a>
+
+
+<!-- FACEBOOK -->
+
+<a
+class="link facebook"
+href="https://www.facebook.com/share/1D7WYkjmti/"
+target="_blank">
+
+<div class="icon">
+<i class="fa-brands fa-facebook-f"></i>
+</div>
+
+<div class="info">
+<strong>Facebook</strong>
+<small>Follow us on Facebook</small>
+</div>
+
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+
+</a>
+
+
+<!-- TIKTOK -->
+
+<a
+class="link tiktok"
+href="https://www.tiktok.com/@morocco.dreams8?_r=1&_t=ZS-98h6YRY7kcS"
+target="_blank">
+
+<div class="icon">
+<i class="fa-brands fa-tiktok"></i>
+</div>
+
+<div class="info">
+<strong>TikTok</strong>
+<small>Follow us on TikTok</small>
+</div>
+
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+
+</a>
+
+
+<!-- EMAIL -->
+
+<a
+class="link email"
+href="mailto:Info@morocco-dreams.com">
+
+<div class="icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
+
+<div class="info">
+<strong>Email</strong>
+<small>Info@morocco-dreams.com</small>
+</div>
+
+<div class="arrow">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+
+</a>
+
+
+<!-- FOOTER -->
+
+<div class="bottom">
+
+<div class="ornament">
+❈
+</div>
+
+<footer>
+© Morocco Dreams
+</footer>
+
+</div>
+
+
+</div>
 </div>
 
 </body>
